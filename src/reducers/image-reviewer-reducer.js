@@ -24,10 +24,15 @@ const ImageReviewerReducer = (state, action) => {
       storeAcceptedImages(newAcceptedImages)
       return { ...state, acceptedImages: newAcceptedImages }
     case REJECT_IMAGE:
-      return { ...state, rejectedImages: { ...state.rejectedImages, [state.activeImage.id]:state.activeImage } }
+      return { ...state, rejectedImages: { ...state.rejectedImages,[state.activeImage.id]:state.activeImage }}
     default:
       throw new Error();
   }
 }
+
+
+
+
+
 
 export default ImageReviewerReducer;
